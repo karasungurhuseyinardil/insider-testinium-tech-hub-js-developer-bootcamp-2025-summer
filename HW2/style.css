@@ -1,0 +1,99 @@
+/* Genel sayfa ayarları */
+body {
+  background-color: #c0d8f0; /* soluk gri-mavi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Form kutusu */
+.form-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Başlık */
+.form-container h1 {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Etiketler */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Checkbox etiketi için özel sınıf */
+.remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember input {
+  margin-right: 8px;
+}
+
+/* Inputlar */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007BFF; /* Mavi kenarlık */
+  outline: none;
+}
+
+/* Butonlar */
+button {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Linkler */
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
