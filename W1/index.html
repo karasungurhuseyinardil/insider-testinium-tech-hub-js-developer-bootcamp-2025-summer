@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Rick & Morty</a>
+      <button class="hamburger">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#about">Konu</a></li>
+        <li><a href="#characters">Karakterler</a></li>
+        <li><a href="#scene">Favori Sahne</a></li>
+        <li><a href="episodes.html">Bölümler</a></li>
+        <li><a href="about.html">Hakkında</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Rick and Morty</h1>
+    <img src="img/poster.jpeg" alt="Rick and Morty Poster" />
+  </section>
+
+  <section id="about" class="content">
+    <h2>Dizinin Konusu</h2>
+    <p>Rick and Morty, dâhi ama alkolik ve hayata karşı umursamaz bir bilim insanı olan Rick Sanchez ile onun endişeli torunu Morty Smith’in paralel evrenler arasında geçen çılgın maceralarını konu alan bir animasyon dizisidir. Rick’in “portal tabancası” sayesinde ikili, sonsuz sayıda boyut ve gerçeklikte absürt, komik ve zaman zaman karanlık olaylarla karşılaşır. Bilimkurgu klişelerini kara mizah ve popüler kültürle harmanlayan dizi, varoluşçuluk, determinizm ve yaşamın anlamsızlığı gibi felsefi temalara da cesurca dokunur. Her bölümü benzersiz bir macera olan Rick and Morty, hem zekice yazılmış senaryosuyla hem de yaratıcı evren tasarımıyla izleyicilere eşsiz bir deneyim sunar.</p>
+  </section>
+
+  <section id="characters" class="content">
+    <h2>Karakterler</h2>
+    <div class="character-grid">
+      <div class="card">
+        <img src="img/rick.jpeg" alt="Rick Sanchez" />
+        <h3>Rick Sanchez</h3>
+        <p>Çılgın ve dahi bir bilim adamı. Alkolik ve çoğu zaman sorumsuz.</p>
+      </div>
+      <div class="card">
+        <img src="img/morty.jpeg" alt="Morty Smith" />
+        <h3>Morty Smith</h3>
+        <p>Rick'in torunu. Genellikle Rick'in kaotik planlarında kurban olur.</p>
+      </div>
+      <div class="card">
+        <img src="img/summer.jpeg" alt="Summer Smith" />
+        <h3>Summer Smith</h3>
+        <p>Morty'nin ablası. Maceralara katılmakta hevesli ve zeki.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene" class="content">
+    <h2>Favori Sahne</h2>
+    <p>"Pickle Rick!" bölümü: Rick, turşuya dönüşerek tüm bir tesisi tek başına alt eder!</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_gRnvDRFYN4" title="Pickle Rick" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="content">
+    <button id="favBtn">Favorilere Ekle</button>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
