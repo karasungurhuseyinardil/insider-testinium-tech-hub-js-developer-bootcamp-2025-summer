@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Longest Collatz Sequence</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Longest Collatz Chain (Under 1 Million)</h1>
+  <button onclick="findLongestCollatz()">Find It</button>
+  <div id="result"></div>
+
+  <script>
+    function collatzChainLength(n, memo) {
+      if (n === 1) return 1;
+      if (memo[n]) return memo[n];
+
+      let next = n % 2 === 0 ? n / 2 : 3 * n + 1;
+      memo[n] = 1 + collatzChainLength(next, memo);
+      return memo[n];
+    }
+
+    function findLongestCollatz() {
+      const limit = 1000000;
+      let maxLength = 0;
+      let startingNumber = 0;
+      const memo = {};
+      const resultDiv = document.getElementById("result");
+
+      resultDiv.innerHTML = "Calculating... please wait ⏳";
+
+      setTimeout(() => {
+        for (let i = 1; i < limit; i++) {
+          const length = collatzChainLength(i, memo);
+          if (length > maxLength) {
+            maxLength = length;
+            startingNumber = i;
+          }
+        }
+
+        resultDiv.innerHTML = `
+          🚀 <strong>Starting number:</strong> ${startingNumber}<br/>
+          🔗 <strong>Chain length:</strong> ${maxLength}
+        `;
+      }, 50);
+    }
+  </script>
+</body>
+</html>
