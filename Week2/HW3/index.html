@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geri Sayım Uygulaması</title>
+
+  <!-- Haricî stil dosyası -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Geri Sayım</h1>
+
+  <!-- Kullanıcıdan süreyi alma -->
+  <label for="timeInput">Süre (sn): </label>
+  <input id="timeInput" type="number" min="1" value="10">
+
+  <!-- Kontrol butonları -->
+  <div>
+    <button id="startBtn">Başlat</button>
+    <button id="resetBtn">Sıfırla</button>
+  </div>
+
+  <!-- Sayaç gösterimi -->
+  <p id="display">–</p>
+
+  <!-- Haricî JavaScript dosyası -->
+  <script src="script.js"></script>
+</body>
+</html>
